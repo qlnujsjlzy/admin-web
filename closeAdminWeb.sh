@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-kill 9 4896
+kill 9 10196
