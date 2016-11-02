@@ -9,7 +9,7 @@ import java.io.FileOutputStream;
 import java.lang.management.ManagementFactory;
 
 @SpringBootApplication
-@PropertySource(value = "file:./application.properties")
+//@PropertySource(value = "file:./application.properties")
 public class AdminWeb {
 
     public static void main(String[] args) throws Exception {

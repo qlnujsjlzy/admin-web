@@ -2,11 +2,13 @@ package com.angular.admin;
 
 import com.angular.admin.dao.mapper.UserMapper;
 import com.angular.admin.domain.User;
+import com.angular.admin.service.SentryRedisConn;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -23,6 +25,19 @@ public class ApplicationTests {
 
 	@Autowired
 	private UserMapper userMapper;
+	@Autowired
+	private SentryRedisConn sentryRedisConn;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+	@Test
+	@Rollback
+	public void testRedis() throws Exception {
+		String rm=sentryRedisConn.hget("MEMADDRSINGLE_SHOP|10073739669|SH|1","1508316");
+		System.out.println("key:value"+rm);
+	}
+
 
 	@Test
 	@Rollback
@@ -56,6 +71,8 @@ public class ApplicationTests {
 			Assert.assertEquals(null, user.getId());
 			Assert.assertNotEquals(null, user.getName());
 		}
+        userMapper.delete(userMapper.findByName("BBB").getId());
+        userMapper.delete(userMapper.findByName("CCC").getId());
 
 	}
 
