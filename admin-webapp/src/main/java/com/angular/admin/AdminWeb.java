@@ -1,14 +1,18 @@
 package com.angular.admin;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.io.FileOutputStream;
 import java.lang.management.ManagementFactory;
 
 @SpringBootApplication
+@EnableAutoConfiguration
+@EnableScheduling
 //@PropertySource(value = "file:./application.properties")
 public class AdminWeb {
 

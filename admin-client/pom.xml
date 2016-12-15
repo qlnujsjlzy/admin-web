@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>admin-web</artifactId>
+        <groupId>com.angular.admin</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>admin-client</artifactId>
+    <packaging>jar</packaging>
+    <name>admin-client</name>
+    
+    <properties>
+        <mybatis.version>3.2.8</mybatis.version>
+        <mybatis-spring.version>1.2.2</mybatis-spring.version>
+        <spring.version>4.0.6.RELEASE</spring.version>
+        <junit.version>4.10</junit.version>
+        <javassist.version>3.19.0-GA</javassist.version>
+        <fastjson.version>1.2.7</fastjson.version>
+        <slf4j-api.version>1.7.21</slf4j-api.version>
+        <druid.version>1.0.18</druid.version>
+        <mysql.version>5.1.38</mysql.version>
+        <aspectj.version>1.8.8</aspectj.version>
+    </properties>
+    
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>${javassist.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

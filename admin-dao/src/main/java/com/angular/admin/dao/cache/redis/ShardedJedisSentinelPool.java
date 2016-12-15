@@ -209,6 +209,9 @@ public class ShardedJedisSentinelPool  extends Pool<ShardedJedis> {
         return shardMasters;
     }
 
+    public void returnResource(ShardedJedis jedis) {
+    }
+
 
     /**
      * PoolableObjectFactory custom impl.
