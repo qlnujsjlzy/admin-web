@@ -26,7 +26,7 @@ public class SchedulingConfigurerConfiguration implements SchedulingConfigurer {
         taskRegistrar.addFixedRateTask(new IntervalTask(new Runnable() {
             @Override
             public void run() {
-                System.out.println("Job @ fixed rate " + new Date() + ", Thread name is " + Thread.currentThread().getName());
+//                System.out.println("Job @ fixed rate " + new Date() + ", Thread name is " + Thread.currentThread().getName());
             }
         }, 1000, 0));
     }

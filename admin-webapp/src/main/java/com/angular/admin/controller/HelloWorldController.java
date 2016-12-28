@@ -1,5 +1,6 @@
 package com.angular.admin.controller;
 
+import com.angular.admin.common.utils.JsonUtil;
 import com.angular.admin.domain.Greeting;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class HelloWorldController {
     private final AtomicLong counter = new AtomicLong();
 
 
-    @RequestMapping(value = "greeting", method = RequestMethod.GET)
+    @RequestMapping(value = "greeting")
     public List<Greeting> sayHello(@RequestParam(value = "name", required = false, defaultValue = "Stranger") String name) {
         Greeting g1 = new Greeting(counter.incrementAndGet(), String.format(template, name));
         Greeting g2 = new Greeting(counter.incrementAndGet(), String.format(template, name));
@@ -25,6 +26,7 @@ public class HelloWorldController {
         list.add(g1);
         list.add(g2);
         list.add(g3);
+        System.out.println(JsonUtil.toJson(list));
         return list;
     }
 

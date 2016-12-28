@@ -22,11 +22,11 @@ public class ScheduledTasks {
 
     private AtomicInteger counter = new AtomicInteger(0);
 
-    @Scheduled(fixedRate = 2000)
-    public void fixedRateJob() {
-        int jobId = counter.incrementAndGet();
-        System.out.println("Job @ fixed rate " + new Date() + ", jobId: " + jobId);
-    }
+//    @Scheduled(fixedRate = 2000)
+//    public void fixedRateJob() {
+//        int jobId = counter.incrementAndGet();
+//        System.out.println("Job @ fixed rate " + new Date() + ", jobId: " + jobId);
+//    }
 
 
 }
